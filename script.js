@@ -15,4 +15,4 @@ document.querySelector('.slider-prev').addEventListener('click', function () {
         offset = 768;
     }
     sliderLine.style.left = -offset + 'px';
-});
+}); 
