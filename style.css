@@ -1,71 +1,37 @@
-/* Сброс стилей */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Важно для предсказуемых размеров */
-}
-
-body {
-    font-size: 18px;
-    font-family: sans-serif;
-    background: #f1f1f1;
-}
+/* Сб* { margin: 0; box-sizing: border-box; }
 
 .container {
     max-width: 1200px;
     margin: 30px auto;
+    text-align: center;
     padding: 30px;
-    text-align: center; /* Центрируем содержимое */
 }
 
-h1 {
-    margin-bottom: 40px;
-}
-
-/* Стили кнопок */
-button {
-    background: none;
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    margin: 10px;
-}
-
-button:hover {
-    background: orangered;
-    color: white;
-}
-
-button:active {
-    background: #000;
-    color: #fff;
-}
-
-/* Слайдер */
 .slider {
-    width: 256px; /* Можно сделать адаптивным, например, 100% и ограничить max-width */
+    width: 256px;
     height: 256px;
     margin: 20px auto;
     overflow: hidden;
-    position: relative; /* Для позиционирования внутренних элементов если нужно */
     border: 2px solid black;
 }
 
 .slider-line {
+    width: 1024px;
+    height: 256px;
     display: flex;
-    height: 100%;
-    /* Убираем фиксированную ширину, она будет зависеть от контента */
-    /* transition теперь будем управлять через JS или оставим здесь, но лучше через класс */
-    transition: transform 0.5s ease-in-out; /* Более производительная анимация */
-    will-change: transform; /* Подсказка браузеру для оптимизации */
+    position: relative;
+    transition: left 1s;
 }
 
 .slider-line img {
-    width: 256px; /* Фиксируем ширину каждого слайда */
+    width: 256px;
     height: 256px;
-    object-fit: cover; /* Чтобы картинки не искажались */
-    flex-shrink: 0; /* Запрещаем сжатие картинок */
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
 }
